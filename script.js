@@ -452,3 +452,41 @@
 // Додати перевірку, що аргументи це числа.
 
 
+// const numbers = [1, 2, 3, 4, 5];
+// const result = numbers.map(number => {
+//     return number +number;
+// })
+// console.log(result);
+
+// Напишіть функцію, яка перевіряє чи слово являється паліндромом
+
+
+// const isPalindrom = (str) => {
+//     str = str.replace(/\s/g, '').toLowerCase();
+//     return str === str.split('').reverse().join('');
+// }
+
+// console.log(isPalindrom('abcd'));
+// console.log(isPalindrom('dad'))
+// console.log(isPalindrom('Never odd or even'));
+
+
+const slash = '#';
+const space = ' ';
+
+function createBoard(x, y) {
+    let result = '';
+    let row = true;
+
+    for (var i = 0; i < y; i++) {
+      for (var j = 0; j < x; j++) {
+        result += (j+row) % 2 == 0 ? space : slash;
+      }
+
+      console.log(result);
+      result='';
+      row = !row;
+    }
+}
+
+createBoard(8,8);
